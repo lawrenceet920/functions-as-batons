@@ -4,14 +4,12 @@
 
 def welcome():
     return'Hello and welcome to my room area calcualtor script!'
-
 def find_length():
     while True:
         length = input('Enter the length of the room: \n')
         if length.isdigit():
             break
     return int(length)
-
 def find_width():
     while True:
         width = input('Enter the width of the room: \n')
@@ -26,5 +24,8 @@ def end_script():
     return 'Thank you for using my script (:)'
 
 welcome()
-print(display_area(find_area(find_width(), find_length())))
+width = find_width()
+length = find_length()
+area = find_area(width, length)
+print(display_area(area))
 end_script()
